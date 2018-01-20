@@ -19,7 +19,7 @@ val ProtoBuf.Class.classKind: Kind get() = Flags.CLASS_KIND[flags] ?: ProtoBuf.C
 val ProtoBuf.Class.isInnerClass: Boolean get() = Flags.IS_INNER[flags]
 val ProtoBuf.Class.isDataClass: Boolean get() = Flags.IS_DATA[flags]
 val ProtoBuf.Class.isExternalClass: Boolean get() = Flags.IS_EXTERNAL_CLASS[flags]
-val ProtoBuf.Class.isHeaderClass: Boolean get() = Flags.IS_HEADER_CLASS[flags]
+val ProtoBuf.Class.isHeaderClass: Boolean get() = Flags.IS_EXPECT_CLASS[flags]
 
 val ProtoBuf.TypeAlias.hasAnnotations: Boolean get() = Flags.HAS_ANNOTATIONS[flags]
 val ProtoBuf.TypeAlias.visibility: Visibility? get() = Flags.VISIBILITY[flags]
@@ -44,7 +44,7 @@ val ProtoBuf.Function.isInline: Boolean get() = Flags.IS_INLINE[flagsOrOld]
 val ProtoBuf.Function.isTailRec: Boolean get() = Flags.IS_TAILREC[flagsOrOld]
 val ProtoBuf.Function.isExternalFunction: Boolean get() = Flags.IS_EXTERNAL_FUNCTION[flagsOrOld]
 val ProtoBuf.Function.isSuspend: Boolean get() = Flags.IS_SUSPEND[flagsOrOld]
-val ProtoBuf.Function.isHeaderFunction: Boolean get() = Flags.IS_HEADER_FUNCTION[flagsOrOld]
+val ProtoBuf.Function.isHeaderFunction: Boolean get() = Flags.IS_EXPECT_FUNCTION[flagsOrOld]
 
 val ProtoBuf.Property.hasAnnotations: Boolean get() = Flags.HAS_ANNOTATIONS[flagsOrOld]
 val ProtoBuf.Property.visibility: Visibility? get() = Flags.VISIBILITY[flagsOrOld]
@@ -59,7 +59,7 @@ val ProtoBuf.Property.isLateInit: Boolean get() = Flags.IS_LATEINIT[flagsOrOld]
 val ProtoBuf.Property.hasConstant: Boolean get() = Flags.HAS_CONSTANT[flagsOrOld]
 val ProtoBuf.Property.isExternalProperty: Boolean get() = Flags.IS_EXTERNAL_PROPERTY[flagsOrOld]
 val ProtoBuf.Property.isDelegated: Boolean get() = Flags.IS_DELEGATED[flagsOrOld]
-val ProtoBuf.Property.isHeaderProperty: Boolean get() = Flags.IS_HEADER_PROPERTY[flagsOrOld]
+val ProtoBuf.Property.isHeaderProperty: Boolean get() = Flags.IS_EXPECT_PROPERTY[flagsOrOld]
 
 val ProtoBuf.Property.getterHasAnnotations: Boolean get() = Flags.HAS_ANNOTATIONS.get(getterFlags)
 val ProtoBuf.Property.getterVisibility: Visibility? get() = Flags.VISIBILITY.get(getterFlags)
